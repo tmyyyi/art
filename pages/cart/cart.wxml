@@ -56,9 +56,9 @@
             <view class='item_bottom'>
               <view class='item_price'>￥{{item.price}}</view>       
             <view class='handle'>
-              <view class='inc' catchtap='increase' data-index="{{index}}">-</view>
+              <view class='inc' catchtap='minus' data-index="{{index}}">-</view>
               {{item.count}}
-              <view class='minus' catchtap='minus' data-index="{{index}}">+</view>            
+              <view class='minus' catchtap='increase' data-index="{{index}}">+</view>            
             </view>
           </view>          
         </view>
