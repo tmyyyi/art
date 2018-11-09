@@ -1,0 +1,9 @@
+<!--pages/address/address.wxml-->
+<view class='title'>收获地址</view>
+<view class='content'>收件人：{{name}}电话：{{phone}}收件地址{{address}}</view>
+<view class='edit'>
+  <view class='edititem'>姓名<input class='input' placeholder='请输入用户名' bindinput="getInput1"/></view>
+  <view class='edititem'>手机<input class='input' placeholder='请输入手机号码' bindinput="getInput2"/></view> 
+  <input  class='address' placeholder='请填写完整的地址'></input>
+</view>
+<button class='add' bindtap='add' bindinput="getInput3">保存 </button>

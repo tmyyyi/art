@@ -1,0 +1,43 @@
+/* pages/address/address.wxss */
+.title{
+  font-size: 30rpx;
+  height: 80rpx;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 18rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.content{
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.add{
+  font-size:30rpx;
+  width: 300rpx;
+  margin-top: 100rpx;
+}
+.edit{
+  width: 100%;
+  font-size: 26rpx;
+}
+.edititem{
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;  
+  padding:20rpx 40rpx;
+  margin-top: 60rpx;
+}
+.input{
+  width: 80%;
+  margin-left: 20rpx;
+  padding-left: 20rpx;
+  border-bottom: 1px solid #666;  
+}
+.address{
+  border-bottom: 1px solid #666;
+  padding-left: 30rpx;
+  text-align: center;
+  padding: 30rpx;
+}

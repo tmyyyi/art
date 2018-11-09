@@ -5,7 +5,13 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    
+    address:''
+  },
+  manageaddress(){
+    console.log(2)
+    wx.navigateTo({
+      url: '/pages/address/address',
+    })
   },
   tologin(){
     wx.navigateTo({
@@ -15,22 +21,18 @@ Page({
   logout(){
     this.setData({
       userInfo:{},
-      canIUse:false
+      canIUse:false,
+      address:''
     })
     wx.removeStorageSync("userInfo")
   },
   dingwei(){
-    wx.chooseAddress({
-      success(res) {
-        console.log(res.userName)
-        console.log(res.postalCode)
-        console.log(res.provinceName)
-        console.log(res.cityName)
-        console.log(res.countyName)
-        console.log(res.detailInfo)
-        console.log(res.nationalCode)
-        console.log(res.telNumber)
-      }
+    wx.chooseLocation({
+      success: (res) => {
+        this.setData({
+          address:res.address
+        })
+      },
     })
   },
   //事件处理函数

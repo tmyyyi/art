@@ -6,7 +6,8 @@
       <view class='logout' bindtap='logout' wx:if="{{userInfo.nickName}}">退出</view>
       <text class="userinfo-nickname" wx:if="{{userInfo.nickName}}">hello!{{userInfo.nickName}}</text>
       <!-- <text class='position' wx:if="{{userInfo.province}}">您的位置{{userInfo.province}},{{userInfo.city}}</text> -->
-      <text class='position' wx:if="{{userInfo.province}}" catchtap='dingwei'>您的位置</text>
+      <text class='position' wx:if="{{userInfo&&!address}}" catchtap='dingwei'>[定位您的地址]</text>
+      <text class='position' catchtap='dingwei' wx:if="{{address}}">{{address}}</text>
     </block>
   </view>
   <view class="usermotto">
@@ -58,7 +59,7 @@
     </view><view class='eightbtn'>
       <image class='eightbtnimg' src='/assets/img/mall.png'/>
       <view class='eightbtntitle'>积分商城</view>
-    </view><view class='eightbtn'>
+    </view><view class='eightbtn' catchtap='manageaddress'>
       <image class='eightbtnimg' src='/assets/img/addr.png'/>
       <view class='eightbtntitle'>收货地址</view>
     </view><view class='eightbtn'>
