@@ -1,0 +1,133 @@
+/* pages/mall/mall.wxss */
+.mall{
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+/* 头部 */
+.yc_header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 10000;
+  /* height: 174rpx; */
+  height: 90rpx;
+  padding-top: 20rpx !important;
+}
+.yc_headerTop{
+  height: 60rpx;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20rpx;  
+}
+.yc_header_kefu{
+  width: 82rpx;
+  height: 60rpx;  
+  background: url(https://cdn.ywart.com/icon/Headerkefu.png) no-repeat center center;
+    background-size: 52rpx !important;
+}
+.yc_header_search{
+  flex: 1;
+  height: 60rpx;
+  background: #f2f2f2;
+  border-radius: 8rpx;
+}
+.yc_header_input{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 0;
+  background: #f2f2f2;
+  padding-left: 20rpx;
+  font-size: 28rpx !important;
+}
+.yc_header_msg{
+  width: 82rpx;
+  height: 60rpx;  
+  background: url(https://cdn.ywart.com/icon/znx.png) no-repeat center center;
+    background-size: 52rpx !important;
+}
+.yc_headerTop2{
+  height: 80rpx;
+  display: flex;
+  border-bottom: 1px solid #eee;
+  background: #fff;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 24rpx;
+  color: #333;
+}
+.zonghe{
+  width:30%;
+  line-height: 80rpx;
+  text-align: center;    
+  height: 80rpx;  
+}
+.mall-list{
+  height: 100%;
+}
+.tuijian{
+  width:30%;
+  line-height: 80rpx;
+  text-align: center;    
+  height: 80rpx;  
+}
+.jiage{
+  width:30%;
+  line-height: 80rpx;
+  text-align: center;  
+  height: 80rpx;  
+}
+
+/* 内容部分 */
+.mall_content{
+  margin-top: 200rpx;
+  width: 100%;
+}
+.mall_active{
+  font-weight: 600;
+  color: #000;
+}
+
+/* 全部的内容 */
+.all{
+  width: 100%;
+  padding-top: 20rpx;
+}
+.allwork_imgs{
+  margin-top: 20rpx;
+  width: 98%;
+  box-shadow:8px 6px 8px #a4a3a3;  
+}
+.allwork{
+  width: 85%;
+  margin: 0 auto;
+  /* border: 1px solid; */
+  overflow: hidden;  
+}
+.allwork_info{
+  margin: 20rpx 10rpx;
+  color: #333;
+  width: 100%;
+}
+.allwork_price{
+  font-size: 28rpx;
+  margin-bottom: 2px;
+  margin-left: 30rpx;    
+}
+.woinfo{
+  font-size: 24rpx;
+  color: #666;
+  display: flex;
+}
+.allwork_woinfo{
+  padding-left: 30rpx;
+}
+
+/* 推荐商品的内容 */

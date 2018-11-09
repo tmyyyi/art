@@ -1,0 +1,43 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <view class='search-wrap'>
+    <!-- 导航框 -->
+    <view class='search-nav'>
+      <view class='search-form'>
+        <input
+          type='search'
+          placeholder='搜索商品发现更多'
+          class="search-input"
+          bindinput="getInput"
+          bindconfirm="gotodetail"
+        />
+      </view>
+      <view class='quxiao' bindtap="quxiao">取消</view>
+    </view>
+
+    <!-- 显示部分 -->
+    <view class='search-content' wx:if="{{!result}}">
+      <!-- 历史记录 -->
+      <view class='showitem'>
+        <view class='text'>历史记录</view>
+        <view class='show' wx:for="{{history}}">
+          <view class='itemname'>{{item}}</view>
+        </view>      
+      </view>
+      <view class='clearh' catchtap='clear' wx:if="{{history}}">清除历史记录</view>
+        <view class='clearh' wx:else>暂时没有历史记录~</view>  
+      <!-- 热门搜索 -->
+      <view class='showitem'>
+        <view class='text'>热门搜索</view>
+        <view class='show' wx:for="{{hot}}" wx:key="{{item.price}}">
+          <view class='itemname'>{{item.ArtworkName}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 搜索不到结果 -->
+    <view class='noresult' wx:else>
+      没有找到内容,换个关键字试试吧
+    </view>
+  </view>
+</view>

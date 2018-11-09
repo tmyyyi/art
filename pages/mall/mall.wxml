@@ -1,0 +1,102 @@
+<!--pages/mall/mall.wxml-->
+<view class='mall'>
+
+  <!-- 头部 -->
+  <view class='yc_header'>
+    <view class='yc_headerTop'>
+      <view class='yc_header_kefu'></view>
+      <view class='yc_header_search'>
+        <input catchtap='gotosearch' class="yc_header_input" placeholder='请输入关键字作品'></input>
+      </view>
+      <view class='yc_header_msg'></view>      
+    </view>
+    <view class='yc_headerTop2'>
+      <view class="zonghe {{currentTab == 0 ? 'mall_active' : ''}}" data-current="0" catchtap='all'>全部</view>
+      <view class="tuijian {{currentTab == 1 ? 'mall_active' : ''}}" data-current="1" catchtap='recomend'>推荐</view>
+      <view class="jiage {{currentTab == 2 ? 'mall_active' : ''}}" data-current="2"  catchtap='limitbuy'>限时抢购</view>      
+    </view>    
+  </view>
+
+  <!-- 内容部分 -->
+  <view class='mall_content'>
+
+    <!-- 全部 -->
+    <view wx:if="{{currentTab == 0}}" class='all'>
+      <view 
+        class='allwork' 
+        wx:for="{{alllist}}"
+        wx:key ="{{index}}"
+        data-img="{{item.ArtworkId}}"
+        data-author="{{item.ArtistName}}"
+        data-workname="{{item.ArtworkName}}"
+        data-price="{{item.OriginalPrice}}"
+        data-id="{{item.ArtworkId}}"                            
+        bindtap='gotoDetail'
+      >
+        <view class='allwork_img'>
+          <image class='allwork_imgs' src="/assets/img/{{item.ArtworkId}}.jpg"/>
+        </view>
+        <view class='allwork_info'>
+          <view class='allwork_price'>￥{{item.Price}}</view>
+          <view class='woinfo'>
+            <view class='allwork_woinfo'>{{item.ArtworkName}}</view> 
+            <view class='allwork_woinfo'>{{item.ArtworkMaterial}}</view> 
+          </view>                   
+        </view>        
+      </view>
+    </view>
+
+    <!-- 推荐 -->
+    <view wx:if="{{currentTab == 1}}">
+      <view 
+        class='allwork' 
+        wx:for="{{recomendlist}}"
+        wx:key ="{{index}}"
+        data-img="{{item.ArtworkId}}"
+        data-author="{{item.ArtistName}}"
+        data-workname="{{item.ArtworkName}}"
+        data-price="{{item.OriginalPrice}}"
+        data-id="{{item.ArtworkId}}"                            
+        bindtap='gotoDetail'
+        >
+        <view class='allwork_img'>
+          <image class='allwork_imgs' src="/assets/img/{{item.ArtworkId}}.jpg"/>
+        </view>
+        <view class='allwork_info'>
+          <view class='allwork_price'>￥{{item.Price}}</view>
+          <view class='woinfo'>
+            <view class='allwork_woinfo'>{{item.ArtworkName}}</view> 
+            <view class='allwork_woinfo'>{{item.ArtworkMaterial}}</view> 
+          </view>                   
+        </view>        
+      </view>
+    </view>
+
+    <!-- 限时抢购 -->
+    <view wx:if="{{currentTab == 2}}">
+      <view 
+        class='allwork' 
+        wx:for="{{limitlist}}"
+        wx:key ="{{index}}"
+        data-img="{{item.ArtworkId}}"
+        data-author="{{item.ArtistName}}"
+        data-workname="{{item.ArtworkName}}"
+        data-price="{{item.OriginalPrice}}"
+        data-id="{{item.ArtworkId}}"                            
+        bindtap='gotoDetail'
+        >
+        <view class='allwork_img'>
+          <image class='allwork_imgs' src="/assets/img/{{item.ArtworkId}}.jpg"/>
+        </view>
+        <view class='allwork_info'>
+          <view class='allwork_price'>￥{{item.Price}}</view>
+          <view class='woinfo'>
+            <view class='allwork_woinfo'>{{item.ArtworkName}}</view> 
+            <view class='allwork_woinfo'>{{item.ArtworkMaterial}}</view> 
+          </view>                   
+        </view>        
+      </view>
+    </view> 
+       
+  </view>
+</view>

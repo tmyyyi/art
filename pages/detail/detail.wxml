@@ -1,0 +1,48 @@
+<!--pages/detail/detail.wxml-->
+<view class='yc_detail'>
+
+  <!-- 头部样式 -->
+  <view class='headerMin'>
+    <view class='historyback'></view>
+    <view class='headertitle'>{{workname}}</view>
+    <view class='lianxikefu'></view>    
+  </view>
+
+  <!-- 内容 -->
+  <view class='yc_content'>
+
+    <!-- 展示图片 -->
+    <view class='yc_detail_show'>
+      <view class='yc_detail_show_wrap'>
+        <image class='yc_detail_img' src='/assets/img/{{img}}.jpg' />
+      </view>
+      <view class='nav-tabs'>
+        主图（1/1）
+      </view>
+    </view>
+
+    <!-- 作品信息 -->
+    <view class='yc_detail_info'>
+      <view class='priceinfo'>
+        <view class='priceinfoLeft'>
+          <view class='workname'>{{workname}}</view>
+          <view class='yc_detail_price'>￥{{price}}</view>
+          <view class='yc_otherinfo'>布面油画,120x80cm</view>         
+        </view>
+        <view class='priceinfoRight'>
+          
+        </view>
+      </view>
+    </view>
+    <!-- 底栏 -->
+    <view class='bottombar'>
+      <view class='showcart' catchtap='gotocart'>
+          <image class='showcart_img' src='/assets/img/detailcar.png'></image>
+          购物车
+      </view>
+      <view class='addcart' bindtap='addtocart'>加入购物车</view>
+      <view class='gobuy'>立即购买</view>      
+    </view>
+
+  </view>
+</view>

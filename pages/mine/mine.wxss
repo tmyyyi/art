@@ -1,0 +1,147 @@
+/* pages/mine/mine.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.avatar_button{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 1px solid #333;
+  background: #eee;
+  color: #666;
+  font-size: 28rpx;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+.position{
+  font-size: 24rpx;
+  color: #aaa;
+}
+.tologin{
+  font-size: 26rpx;
+  color: #333;
+}
+.logout{
+  font-size: 26rpx;  
+  color: #666;
+  position: absolute;
+  right: 50rpx;
+  top: 30rpx;
+}
+/* 成为会员 */
+.top{
+  width: 100%;
+  padding: 40rpx;
+  box-sizing: border-box;
+}
+.vipinfo{
+  font-size: 24rpx;
+  width: 100%;
+  border-radius: 10rpx;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2), -3px 0 3px rgba(0,0,0,0.2);
+}
+.vipbg{
+    width: 100%;
+    height: 216rpx;
+    background-image: url(https://cdn.ywart.com/material/usercenter/vipbg.png);
+    background-size: cover;
+    background-position: right top;
+}
+.left{
+  font-size: 34rpx;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #d1a46a;
+  margin-top: 84rpx;
+  margin-left: 50rpx;
+  line-height: 48rpx;
+  float: left;
+}
+.right{
+  font-size: 24rpx;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #d1a46a;
+  float: right;
+  margin-top: 90rpx;
+  margin-right: 60rpx;
+  position: relative;
+}
+.rightimg{
+  position: absolute;
+  width: 28rpx;
+  height: 28rpx;
+  top: 4rpx;
+  right: -40rpx;
+}
+
+/* fourbtn */
+.fourbtn{
+  width: 100%;
+  height: 152rpx;
+  margin-top: -4rpx;
+  background-color: #fff;
+  border-top-left-radius: 4rpx;
+  border-top-right-radius: 4rpx;
+  border-bottom-left-radius: 10rpx;
+  border-bottom-right-radius: 10rpx;
+
+}
+.fourlist{
+  display: block;
+  width: 25%;
+  float: left;
+  height: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  color: #333;
+}
+.btnimg{
+  margin: 30rpx auto 10rpx;
+  height: 52rpx;
+  width: 52rpx;
+}
+
+/* eightbtn */
+.boxbv{
+  margin-top: 20rpx;
+  background: #fff;
+}
+.eightbtn{
+  width: 25%;
+  height: 160rpx;
+  float: left;
+  box-sizing: border-box;
+  border-bottom: 1px solid #f8f8f8;
+  border-right: 1px solid #f8f8f8;  
+  text-align: center;
+  font-size: 24rpx;
+  color: #666;
+}
+.eightbtnimg{
+  height: 44rpx;
+  width: 44rpx;
+  margin: 36rpx auto 14rpx;
+}
+.eightbtntitle{
+
+}

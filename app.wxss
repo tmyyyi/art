@@ -1,0 +1,6 @@
+/**app.wxss**/
+@import "/libs/reset.wxss";
+.container {
+  height: 100%;
+  box-sizing: border-box;
+} 

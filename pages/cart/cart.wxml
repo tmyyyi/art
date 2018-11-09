@@ -1,0 +1,98 @@
+<!--pages/cart/cart.wxml-->
+<view class='cart'>
+  <!-- 未添加商品的样式 -->
+  <view class='cart_null' wx:if="{{!cartList}}">
+    <view class='icon_cart'>
+      <image class='nocart_img' src='https://cdn.ywart.com/content/cart/cart_null.png'></image>
+      <view class='no_cart'>购物车空空如也</view>
+      <view class='goother' bindtap='goother'>去逛逛</view>      
+    </view>
+  </view>
+
+  <!-- 购物车有商品时的样式 -->
+  <view wx:if="{{cartList}}" class='buy_cart'>
+    <!-- 购物车头部信息 -->
+    <view class='buy_carthead'>
+      <view class='buy_head_text'>
+        <view class='mycart'>我的购物车</view>
+          (
+        <view class='titlecount'>{{cartList.length}}</view>
+          )
+      </view>
+    </view>
+
+    <!-- 购物车列表内容 -->
+    <view class='buy_cartmain'>
+      <view
+        class='buy_item' 
+        wx:for="{{cartList}}" 
+        wx:key="index"
+      >
+        <!-- 根据是否勾选显示不同的图片 -->
+        <view class='cart_check'>
+          <image 
+            catchtap='checkchange' 
+            class='check_item' 
+            data-index="{{index}}"
+            src='/assets/img/check.svg'
+            wx:if="{{!item.selected}}"
+          />
+          <image 
+            catchtap='checkchange' 
+            class='check_item' 
+            data-index="{{index}}"
+            src='/assets/img/checked.svg'
+            wx:else
+          />
+        </view>
+        <!-- 用户信息 -->
+        <view class='item_info'>
+          <view class='item_img'>
+            <image class='detail_img' src='/assets/img/{{item.id}}.jpg'/>
+          </view>
+          <view class='item_detail'>
+            <view class='item_name'>{{item.name}}<view class='deleteitem' catchtap='delete' data-index="{{index}}">删除</view></view> 
+            <view class='item_count'>22</view>  
+            <view class='item_bottom'>
+              <view class='item_price'>￥{{item.price}}</view>       
+            <view class='handle'>
+              <view class='inc' catchtap='increase' data-index="{{index}}">-</view>
+              {{item.count}}
+              <view class='minus' catchtap='minus' data-index="{{index}}">+</view>            
+            </view>
+          </view>          
+        </view>
+      </view>       
+    </view>
+  </view>
+
+  <!-- 购物车全选结算 -->
+    <view class='buy_cart_choice'>
+      <view class='allcheck'>
+        <image 
+          catchtap='selectedall' 
+          class='allcheckout' 
+          src='/assets/img/check.svg'
+          wx:if="{{!selectAll}}"
+        />
+        <image 
+          catchtap='selectedall' 
+          class='allcheckout' 
+          src='/assets/img/checked.svg'
+          wx:else
+        />
+        全选
+      </view>
+      <!-- <view class='yichu' catchtap='deleteList'>移除</view> -->
+      <view class='choice_right'>
+        <view class='yunfei'>(不含运费)</view>
+        <view class='totalmoney'>
+          合计:
+          <view class='totalmoneys'>￥{{totalPrice}}</view>
+        </view>
+        <view class='allcount'>结算</view>        
+      </view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,139 @@
+/* pages/detail/detail.wxss */
+.yc_detail{
+  padding-top: 106rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+
+/* 头部样式 */
+.headerMin{
+  height: 106rpx;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid #f8f8f8;
+  box-sizing: border-box;
+  padding-top: 20rpx !important;
+  display: flex;
+  justify-content: space-between;
+}
+.historyback{
+  width: 82rpx;
+  height: 60rpx;
+}
+.headertitle{
+  font-size: 30rpx;
+  text-align: center;
+  height: 60rpx;
+  line-height: 50rpx;
+  font-weight: 600;
+}
+.lianxikefu{
+  width: 82rpx;
+  height: 60rpx;
+  background: url(https://cdn.ywart.com/icon/Headerkefu.png) no-repeat center center;
+  background-size: 26px;
+  z-index: 3;
+}
+
+/* 内容 */
+.yc_content{
+  padding-bottom: 100rpx;
+}
+.yc_detail_show{
+  background: #eee;
+  width: 100%;
+  padding-top: 20rpx;
+}
+.yc_detail_show_wrap{
+  width: 94%;
+  margin: 0 auto;  
+}
+.yc_detail_img{
+  width: 100%;
+  display: block;
+  padding: 40rpx 0;
+}
+.nav-tabs{
+  text-align: center;
+  height: 72rpx;
+  color: #333;
+  font-size: 24rpx;
+}
+
+/* 商品信息 */
+.yc_detail_info{
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+}
+.priceinfo{
+  padding-left: 28rpx;
+  height: 160rpx;
+  border-bottom: 20rpx solid #f8f8f8;
+}
+.priceinfoLeft{
+  box-sizing: border-box;
+  padding-top: 20rpx;
+  overflow: hidden;
+}
+.workname{
+  font-size: 30rpx;
+  line-height: 32rpx;
+}
+.yc_detail_price{
+  margin-top: 6rpx;
+  color: #ee403c;
+  font-size: 34rpx;
+}
+.yc_otherinfo{
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 4rpx;
+}
+.priceinfoRight{
+  
+}
+
+/* 底部bar */
+.bottombar{
+  position: fixed;
+  z-index: 99;
+  bottom: 0;
+  height: 100rpx;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  border-top: 1px solid #eee;
+  display: flex;
+  text-align: center;  
+}
+.showcart{
+  width: 160rpx;
+  height: 100rpx;
+  font-size: 20rpx;
+  color: #666;
+}
+.showcart_img{
+  width: 44rpx;
+  height: 40rpx;
+  padding: 16rpx 58rpx 0;
+}
+.addcart{
+  color: #333333;
+  background-color: #fff;
+  border-left: 1px solid #eee;
+  line-height: 100rpx;
+  flex: 1;
+}
+.gobuy{
+  color: #fff;
+  background-color: #fff;
+  border-left: 1px solid #eee;
+  line-height: 100rpx; 
+  width:  295rpx;
+  background: #ee403c;
+}

@@ -1,0 +1,44 @@
+<!--pages/login/login.wxml-->
+<view class='login'>
+  <view class='login_btn'>
+    <view class='toglogin'>
+      <view class="account {{currentIndex==1? 'active':''}}" data-index="1" bindtap='logcount'>账户登录</view>
+      <view class="phone {{currentIndex==2? 'active':''}}" data-index="1" data-index="2" bindtap='logphone'>手机登录</view>     
+    </view>
+    <!-- 账户登录显示 -->
+    <view class='account_list' wx:if="{{currentIndex==1}}">
+      <view class='account_name'>
+        <input class='input' type='text' placeholder='请输入手机号码或者邮箱'/>
+      </view>
+      <view class='account_pwd'>
+        <input class='input' type='password' placeholder='请输入密码'/>        
+      </view>
+      <button class='submit'>登录</button>   
+    </view>
+    <!-- 账户登录显示 -->
+    <view class='account_list' wx:else>
+      <view class='account_name'>
+        <input class='input' type='text' placeholder='请输入手机'/>
+      </view>
+      <view class='account_pwd'>
+        <input class='input type='password' placeholder='请输入验证码'/>        
+      </view>
+      <button class='submit'>登录</button>   
+    </view>
+
+    <view class='textBtn'>
+      <view class='forget'>忘记密码</view>
+      <view class='shu'>|</view>      
+      <view class='forget'>立即注册</view>      
+    </view>
+    <!-- 底部 -->
+    <view class='bottombox'>
+      <button 
+        class='weixin' 
+        bindtap='gologin'
+        open-type="getUserInfo" 
+        bindgetuserinfo="getUserInfo"  
+      >使用微信授权快捷登录</button>
+    </view>    
+  </view>
+</view>

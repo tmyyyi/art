@@ -1,0 +1,72 @@
+<!--index.wxml-->
+ <scroll-view
+      scroll-y
+      lower-threshold="100"
+      bindscrolltolower="loadmore"
+      class='index-list'
+    >
+<view class="container">
+ <!-- 头部 -->
+  <view class='yc_header'>
+    <view class='yc_headerTop'>
+      <view class='yc_header_kefu'></view>
+      <view class='yc_header_search'>
+        <input catchtap='gotosearch' class="yc_header_input" placeholder='请输入关键字作品'></input>
+      </view>
+      <view class='yc_header_msg'></view>      
+    </view>
+    <!-- <view class='yc_headerTop'></view>     -->
+  </view>
+
+  <!-- 内容 -->
+  <view class='yc_center'>
+    <!-- 轮播图 -->
+    <view class='yc_swiper_wrap'>
+      <swiper class='yc_swiper_swiper' indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item.MediaUrl}}" class="slide-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- 热门原创 -->
+    <view class='yc_Hot_original'>
+      <view class='yc_box_title'>
+        <view class='yc_toptitle'>热门原创/POPULAR</view>
+        <view class='yc_bottomtitle'>独一无二，唯你独享</view>        
+      </view>
+      <view class='yc_hot_img'>
+        <view  
+          class='yc_hot_img_list' 
+          wx:for="{{HotOriginals}}"
+          wx:key ="{{index}}"
+          data-img="{{item.ArtworkId}}"
+          data-author="{{item.ArtistName}}"
+          data-workname="{{item.ArtworkName}}"
+          data-price="{{item.OriginalPrice}}"
+          data-id="{{item.ArtworkId}}"                            
+          bindtap='gotoDetail'
+        >
+            <view class='yc_int'>       
+              <image class='yc_int_img' src="/assets/img/{{item.ArtworkId}}.jpg"/>
+            </view>
+            <view class='yc_info'>
+              <view class='yc_hot_article'>{{item.ArtistName}}</view>
+              <view class='yc_hot_shu'>|</view>
+              <view class='yc_hot_article'>{{item.ArtworkName}}</view>
+              <view class='yc_hot_price'>￥{{item.OriginalPrice}}</view>            
+            </view>   
+          </view>       
+      </view>
+      <view wx:if="{{page === total}}" class='lastmsg'>
+        已经显示全部，木有啦T.T……
+      </view>
+    </view>
+
+  </view>
+
+</view>
+</scroll-view>

@@ -1,0 +1,79 @@
+/* pages/login/login.wxss */
+.login{
+  width: 100%;
+  padding: 180rpx 40rpx 40rpx;
+  position: absolute;
+  box-sizing: border-box;
+  font-size: 26rpx;
+}
+.toglogin{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 4rpx solid #eee;
+  margin-bottom: 112rpx;
+  font-size: 34rpx;
+}
+.active{
+  font-weight: 600;
+  color: #333;
+  border-bottom: 6rpx solid #000;
+}
+.account{
+  /* margin-right: 142rpx; */
+  padding: 0 4rpx 4rpx 6rpx;
+  text-align: center;  
+}
+.phone{
+  /* margin-right: 142rpx; */
+  padding: 0 4rpx 4rpx 6rpx;
+  text-align: center;  
+}
+
+.account_list{
+  width: 100%;
+}
+.account_name{
+  height: 24rpx;
+  width: 100%;
+  margin-bottom: 40rpx; 
+}
+.account_pwd{
+  margin-top:100rpx;
+  height: 64rpx;
+  width: 100%;
+}
+.input{
+  border-bottom: 2rpx solid #666;
+  line-height: 64rpx;
+  height: 64rpx;
+  font-size: 28rpx;
+  padding-left: 20rpx;
+}
+.submit{
+  margin-top: 80rpx;
+}
+.textBtn{
+  margin-top: 20rpx;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.forget{
+  color: #000;
+}
+.shu{
+  padding: 0 20rpx;
+  color: #979797;
+  position: relative;
+  top: -1;
+}
+.bottombox{
+  margin-top: 160rpx;
+}
+.weixin{
+  border: 1px solid green;
+  color: green;
+}

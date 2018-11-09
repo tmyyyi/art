@@ -1,0 +1,82 @@
+/* pages/search/search.wxss */
+.search{
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+.search-wrap{
+  font-size: 26rpx;
+}
+.search-nav{
+  height: 110rpx;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;  
+}
+.search-form{
+  width: 86%;
+  margin: 2% 0 2% 2%;
+  height: 65%;
+  border:1px solid #eee;
+  color: #aaa;
+  border-radius: 10rpx;
+  float: left;
+  }
+.search-input{
+  background: url(https://cdn.ywart.com/search/ss.png) center no-repeat;
+  background-size: 30rpx;
+  background-position: 5% 42%;
+  padding-left: 68rpx;
+  height: 100%;
+  width: 100%;
+  line-height: 100%;
+  font-size: 28rpx;
+}
+.quxiao{
+  width: 70rpx;
+  text-align: center;
+  height: 110rpx;
+  line-height: 110rpx;
+  color: #666;
+  font-size: 28rpx;
+  /* border: 1px solid; */
+}
+
+/* 显示的部分 */
+.search-content{
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  display: flex;
+  flex-direction: column;
+}
+.showitem{
+  margin: 0 36rpx;
+}
+.text{
+  color: #877a73;
+  font-size: 36rpx;
+  margin: 30rpx;                   
+}
+.itemname{
+  text-align: center;
+  color: #43240c;
+  background: #eee;
+  box-sizing: border-box;
+  padding: 12rpx 20rpx;
+  border-radius: 10rpx;
+  margin: 0 24rpx 30rpx 24rpx;
+  float: left;
+}
+.clearh{
+  text-align: center;
+  padding: 20rpx;
+  color:#877a73;
+}
+
+/* 没有结果 */
+.noresult{
+  text-align: center;
+  margin-top: 200rpx;
+  color: #666;
+}
